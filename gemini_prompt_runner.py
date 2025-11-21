@@ -32,7 +32,7 @@ def main():
         input_box.send_keys(Keys.ENTER)
         print("Prompt sent. Waiting for response...")
 
-        # 4. 等待 Gemini 生成回答（简单粗暴先等 15 秒）
+        # 4. 等待 Gemini 生成回答
         time.sleep(15)
 
         # 5. 先尝试用 message-content 抓最新回答
