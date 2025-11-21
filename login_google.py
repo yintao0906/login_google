@@ -6,18 +6,18 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
-# 1. 指定 ChromeDriver 路径
+# 1. Specify the ChromeDriver path.
 chrome_driver_path = "/usr/local/bin/chromedriver"
 
-# 2. 创建 Chrome 浏览器实例
+# 2. Create a Chrome browser instance.
 service = Service(chrome_driver_path)
 driver = webdriver.Chrome(service=service)
 
 try:
-    # 3. 打开 Google 登录页面
+    # 3. Open the Google login page.
     driver.get("https://accounts.google.com/signin")
 
-    # 4. 等待并输入邮箱
+    # 4. Wait and enter the email.
     wait = WebDriverWait(driver, 15)  # 最长等 15 秒
 
     email_input = wait.until(
@@ -27,7 +27,7 @@ try:
     email_input.send_keys("yintao0906@gmail.com")
     email_input.send_keys(Keys.ENTER)
 
-    # 5. 等待密码输入框出现并输入密码
+    # 5. Wait for the password field to appear and enter the password.
     password_input = wait.until(
         EC.presence_of_element_located((By.NAME, "password"))
     )
@@ -35,9 +35,9 @@ try:
     password_input.send_keys("Yt008296!")
     password_input.send_keys(Keys.ENTER)
 
-    # 6. 登录后，停留 5 秒
+    # 6. After logging in, stay for 5 seconds.
     time.sleep(5)
 
 finally:
-    # 7. 关闭浏览器
+    # 7. Close the browser.
     driver.quit()
