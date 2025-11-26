@@ -1,0 +1,31 @@
+# ===== Python =====
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+*.log
+
+# ===== Virtual environment =====
+venv/
+ENV/
+env/
+
+# ===== Output files =====
+*.txt
+*.md
+*.out
+
+# Gemini Deep Research auto-generated file
+gemini_output.txt
+
+# ===== IDE / OS =====
+.idea/
+*.iml
+.DS_Store
+
+# ===== Selenium user-data =====
+selenium-chrome-profile/
+chrome-profile/
