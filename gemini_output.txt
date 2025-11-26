@@ -1,4 +1,0 @@
-PROMPT:
-Deep research: Explain how LLMs are used in asset pricing.
-
-RESPONSE:
